@@ -21,6 +21,11 @@ public class BookKeeper {
 
 	private InvoiceFactory invoiceFactory;
 
+	public BookKeeper(InvoiceFactory invoiceFactory) {
+		super();
+		this.invoiceFactory = invoiceFactory;
+	}
+
 	public Invoice issuance(InvoiceRequest invoiceRequest, TaxPolicy taxPolicy) {
 		Invoice invoice = invoiceFactory.create(invoiceRequest.getClientData());
 
